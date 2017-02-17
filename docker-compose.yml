@@ -1,8 +1,7 @@
 version: '2'
 services:
   web:
-    #image: dockerdrop/dockerdrop-nginx:latest
-    build: ./docker/nginx/
+    image: moop6535/dockerdrop-nginx:latest
     ports:
       - "8000:80"
     volumes:
@@ -17,8 +16,8 @@ services:
       NGINX_MAX_BODY_SIZE: 20m
 
   php:
-    #image: dockerdrop/dockerdrop-php:latest
-    build: ./docker/php/
+    image: moop6535/dockerdrop-php:latest
+    #build: ./docker/php/
     expose:
       - 9000
     volumes:
